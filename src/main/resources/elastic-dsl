@@ -1,0 +1,42 @@
+curl -XPUT "http://localhost:9200/moviedb" -H 'Content-Type: application/json' -d'
+{
+  "mappings": {
+    "movie":{
+      "properties": {
+        "vote_count":{
+          "type": "integer"
+        },
+        "id":{
+          "type": "integer"
+        },
+        "video":{
+          "type": "boolean"
+        },
+        "vote_average":{
+          "type": "integer"
+        },
+        "title":{
+          "type": "text"
+        },
+        "popularity":{
+          "type": "double"
+        },
+        "original_language":{
+          "type": "text"
+        },
+        "original_title":{
+          "type": "text"
+        },
+        "genre_ids":{
+          "type": "text"
+        },
+        "overview":{
+          "type": "text"
+        },
+        "release_date":{
+          "type": "text"
+        }
+      }
+    }
+  }
+}'
